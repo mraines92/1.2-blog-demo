@@ -10,11 +10,12 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
 
-    post = request.args.get('post')
+    post_name = request.args.get('post')
 
-    print('post')
+    counter_file_name =  '{}_likes.txt'.format(post_name)
 
-    print(count)
+
+
 
     index_file = open('index.html', 'r')
     my_html = index_file.read()
